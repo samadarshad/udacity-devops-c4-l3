@@ -26,7 +26,7 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
       - print_pipeline_id
-      - run: return 1
+      - run: echo 1
       - run: 
           command: echo error!!!
           when: on_fail
