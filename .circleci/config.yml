@@ -22,7 +22,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - run: echo hello
-    print_hello:
+  print_world:
     docker:
       - image: cimg/base:stable
     steps:
