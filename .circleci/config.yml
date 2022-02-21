@@ -27,6 +27,8 @@ jobs:
       - image: cimg/base:stable
     steps:
       - run: echo world
+      - run: echo $NAME
+
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
