@@ -26,6 +26,11 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
       - print_pipeline_id
+      - run: return 1
+      - run: 
+          command: echo error!!!
+          when: on_fail
+
   save_hello_world_output:
     <<: *defaults
     steps:
@@ -40,6 +45,7 @@ jobs:
       - attach_workspace:
           at: ~/
       - run: cat ~/output.txt
+
 
 
 # Invoke jobs via workflows
